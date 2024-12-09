@@ -4,15 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/blur">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/background">
+        android:orientation="vertical">
 
         <!-- Card Content View -->
         <LinearLayout
@@ -48,6 +46,15 @@
                     android:textStyle="bold">
                 </TextView>
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hand"
+                    android:padding="15dp"
+                    android:layout_gravity="end">
+
+                </ImageView>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -75,6 +82,15 @@
                     android:layout_gravity="center_vertical">
 
                 </TextView>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img"
+                    android:padding="15dp"
+                    android:layout_gravity="end">
+
+                </ImageView>
 
             </androidx.cardview.widget.CardView>
 
@@ -104,6 +120,15 @@
 
                 </TextView>
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/info"
+                    android:padding="15dp"
+                    android:layout_gravity="end">
+
+                </ImageView>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -131,6 +156,15 @@
                     android:layout_gravity="center_vertical">
 
                 </TextView>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user"
+                    android:padding="15dp"
+                    android:layout_gravity="end">
+
+                </ImageView>
 
             </androidx.cardview.widget.CardView>
 
@@ -160,13 +194,21 @@
 
                 </TextView>
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/keys"
+                    android:padding="15dp"
+                    android:layout_gravity="end">
+
+                </ImageView>
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
         <!-- Bottom NavBar -->
         <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
@@ -176,14 +218,13 @@
             <com.google.android.material.bottomappbar.BottomAppBar
                 android:id="@+id/bottomAppBar"
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 app:fabCradleMargin="10dp"
                 android:backgroundTint="@color/primary">
 
             </com.google.android.material.bottomappbar.BottomAppBar>
-          
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/FAB"
                 android:layout_width="wrap_content"
