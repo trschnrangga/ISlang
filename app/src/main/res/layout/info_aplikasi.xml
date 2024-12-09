@@ -94,7 +94,7 @@
     </LinearLayout>
 
     <!-- Bottom NavBar -->
-    <FrameLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -102,38 +102,27 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="75dp"
-            android:src="@drawable/rounded_corner_rectangle">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            android:backgroundTint="@color/primary">
 
-        </ImageView>
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <FrameLayout
-            android:id="@+id/camera_button"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/FAB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true">
+            android:src="@drawable/baseline_camera_alt_24"
+            app:layout_anchor="@id/bottomAppBar"
+            app:tint="@color/white"
+            app:backgroundTint="@color/darkerprimary">
 
-            <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/circle_camera">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-            </ImageView>
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/baseline_camera_alt_24"
-                android:layout_gravity="center">
-
-            </ImageView>
-
-        </FrameLayout>
-
-    </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </LinearLayout>

@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/background">
-        <!-- Top NavBar -->
 
         <!-- Card Content View -->
         <LinearLayout
@@ -178,7 +177,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_camera_alt_24"
                 app:layout_anchor="@id/bottomAppBar"
-                android:backgroundTint="@color/darkerprimary">
+                app:tint="@color/white"
+                app:backgroundTint="@color/darkerprimary">
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
