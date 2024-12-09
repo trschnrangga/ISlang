@@ -1,194 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background">
-    <!-- Top NavBar -->
+    android:layout_height="match_parent">
 
-    <!-- Card Content View -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:padding="20dp">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bahasa_isyarat"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/secondary"
-            android:clickable="true"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="@font/neuehaasgroteskregular"
-                android:padding="15dp"
-                android:text="Bahasa Isyarat"
-                android:textColor="#AB5A54"
-                android:textSize="20dp"
-                android:textStyle="bold">
-            </TextView>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/gallery"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="@color/secondary"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp"
-            android:layout_margin="10dp"
-            android:clickable="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gallery"
-                android:textSize="20dp"
-                android:textColor="#AB5A54"
-                android:textStyle="bold"
-                android:fontFamily="@font/neuehaasgroteskregular"
-                android:padding="15dp"
-                android:layout_gravity="center_vertical">
-
-            </TextView>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/info_aplikasi"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="@color/secondary"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp"
-            android:layout_margin="10dp"
-            android:clickable="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Info Aplikasi"
-                android:textSize="20dp"
-                android:textColor="#AB5A54"
-                android:textStyle="bold"
-                android:padding="15dp"
-                android:fontFamily="@font/neuehaasgroteskregular"
-                android:layout_gravity="center_vertical">
-
-            </TextView>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profile"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="@color/secondary"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp"
-            android:layout_margin="10dp"
-            android:clickable="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile"
-                android:textSize="20dp"
-                android:textColor="#AB5A54"
-                android:textStyle="bold"
-                android:padding="15dp"
-                android:fontFamily="@font/neuehaasgroteskregular"
-                android:layout_gravity="center_vertical">
-
-            </TextView>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/tutorial"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:backgroundTint="@color/secondary"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp"
-            app:cardMaxElevation="5dp"
-            android:layout_margin="10dp"
-            android:clickable="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tutorial"
-                android:textSize="20dp"
-                android:textColor="#AB5A54"
-                android:textStyle="bold"
-                android:padding="15dp"
-                android:fontFamily="@font/neuehaasgroteskregular"
-                android:layout_gravity="center_vertical">
-
-            </TextView>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <!-- Bottom NavBar -->
-    <FrameLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:background="@drawable/background">
+        <!-- Top NavBar -->
 
-        <ImageView
+        <!-- Card Content View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bahasa_isyarat"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/secondary"
+                android:clickable="true"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/neuehaasgroteskregular"
+                    android:padding="15dp"
+                    android:text="Bahasa Isyarat"
+                    android:textColor="#AB5A54"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="10dp"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gallery"
+                    android:textSize="20dp"
+                    android:textColor="#AB5A54"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/neuehaasgroteskregular"
+                    android:padding="15dp"
+                    android:layout_gravity="center_vertical">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/info_aplikasi"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="10dp"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info Aplikasi"
+                    android:textSize="20dp"
+                    android:textColor="#AB5A54"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:fontFamily="@font/neuehaasgroteskregular"
+                    android:layout_gravity="center_vertical">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="10dp"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="20dp"
+                    android:textColor="#AB5A54"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:fontFamily="@font/neuehaasgroteskregular"
+                    android:layout_gravity="center_vertical">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tutorial"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:backgroundTint="@color/secondary"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="5dp"
+                app:cardMaxElevation="5dp"
+                android:layout_margin="10dp"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tutorial"
+                    android:textSize="20dp"
+                    android:textColor="#AB5A54"
+                    android:textStyle="bold"
+                    android:padding="15dp"
+                    android:fontFamily="@font/neuehaasgroteskregular"
+                    android:layout_gravity="center_vertical">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Bottom NavBar -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="75dp"
-            android:src="@drawable/rounded_corner_rectangle">
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        </ImageView>
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:fabCradleMargin="10dp"
+                android:backgroundTint="@color/primary">
 
-        <FrameLayout
-            android:id="@+id/camera_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="true">
+            </com.google.android.material.bottomappbar.BottomAppBar>
 
-            <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/circle_camera">
-
-            </ImageView>
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/FAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@drawable/baseline_camera_alt_24"
-                android:layout_gravity="center">
+                app:layout_anchor="@id/bottomAppBar"
+                android:backgroundTint="@color/darkerprimary">
 
-            </ImageView>
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        </FrameLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    </FrameLayout>
+    </LinearLayout>
 
 </LinearLayout>
