@@ -6,39 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background">
-
     <!-- Top NavBar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="#C85951">
-
-        <TextView
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="36dp"
-            android:text="I-Slang"
-            android:paddingLeft="20dp"
-            android:paddingEnd="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_weight="2">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_toc_24"
-            android:padding="10dp"
-            android:layout_gravity="end">
-
-        </ImageView>
-
-    </LinearLayout>
 
     <!-- Card Content View -->
     <LinearLayout
@@ -53,43 +21,46 @@
             android:id="@+id/bahasa_isyarat"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="#FFEBC0"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
             android:layout_margin="10dp"
-            android:clickable="true">
+            android:backgroundTint="@color/secondary"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bahasa Isyarat"
-                android:textSize="20dp"
-                android:textColor="#AB5A54"
-                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/neuehaasgroteskregular"
                 android:padding="15dp"
-                android:layout_gravity="center_vertical">
-
+                android:text="Bahasa Isyarat"
+                android:textColor="#AB5A54"
+                android:textSize="20dp"
+                android:textStyle="bold">
             </TextView>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/galerry"
+            android:id="@+id/gallery"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="@color/secondary"
             app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
             android:layout_margin="10dp"
             android:clickable="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Galerry"
+                android:text="Gallery"
                 android:textSize="20dp"
                 android:textColor="#AB5A54"
                 android:textStyle="bold"
+                android:fontFamily="@font/neuehaasgroteskregular"
                 android:padding="15dp"
                 android:layout_gravity="center_vertical">
 
@@ -101,9 +72,10 @@
             android:id="@+id/info_aplikasi"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="@color/secondary"
             app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
             android:layout_margin="10dp"
             android:clickable="true">
 
@@ -115,6 +87,7 @@
                 android:textColor="#AB5A54"
                 android:textStyle="bold"
                 android:padding="15dp"
+                android:fontFamily="@font/neuehaasgroteskregular"
                 android:layout_gravity="center_vertical">
 
             </TextView>
@@ -125,9 +98,10 @@
             android:id="@+id/profile"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="@color/secondary"
             app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
             android:layout_margin="10dp"
             android:clickable="true">
 
@@ -139,6 +113,7 @@
                 android:textColor="#AB5A54"
                 android:textStyle="bold"
                 android:padding="15dp"
+                android:fontFamily="@font/neuehaasgroteskregular"
                 android:layout_gravity="center_vertical">
 
             </TextView>
@@ -149,9 +124,10 @@
             android:id="@+id/tutorial"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="@color/secondary"
             app:cardCornerRadius="16dp"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="5dp"
             android:layout_margin="10dp"
             android:clickable="true">
 
@@ -163,6 +139,7 @@
                 android:textColor="#AB5A54"
                 android:textStyle="bold"
                 android:padding="15dp"
+                android:fontFamily="@font/neuehaasgroteskregular"
                 android:layout_gravity="center_vertical">
 
             </TextView>
@@ -173,6 +150,7 @@
 
     <!-- Bottom NavBar -->
     <FrameLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
@@ -182,7 +160,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="75dp"
             android:src="@drawable/rounded_corner_rectangle">
 
         </ImageView>

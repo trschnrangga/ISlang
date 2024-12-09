@@ -2,7 +2,8 @@
  
 Mobile Programming Final Project
 
-Theme: Indonesian Sign Languages
+BISINDO Sign Language Detection and Information App
+Used personal dataset with YOLOv8 Model
 
 Member: 
 1. Andhika W. Aryaputra

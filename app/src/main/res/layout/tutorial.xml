@@ -8,37 +8,6 @@
     android:background="@drawable/background">
 
     <!-- Top NavBar -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="#C85951">
-
-        <TextView
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="36dp"
-            android:text="I-Slang"
-            android:paddingLeft="20dp"
-            android:paddingEnd="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_weight="2">
-
-        </TextView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_toc_24"
-            android:padding="10dp"
-            android:layout_gravity="end">
-
-        </ImageView>
-
-    </LinearLayout>
 
     <!-- Card Content View -->
     <LinearLayout
@@ -97,8 +66,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#AB5A54"
-                            android:textSize="18dp"
-                            android:text="Kalian bisa tekan tombol kamera untuk melakukan image recognition atau bisa membuka tab Bahasa Isyarat untuk kamus bahasa isyarat."
+                            android:textSize="14dp"
+                            android:textAlignment="center"
+                            android:text="Kalian bisa tekan tombol kamera untuk melakukan deteksi huruf bahasa isyarat atau bisa membuka tab Bahasa Isyarat untuk kamus bahasa isyarat.\n\n"
+                            android:fontFamily="@font/neuehaasgroteskdsregular"
                             android:padding="10dp">
 
                         </TextView>
@@ -113,7 +84,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:backgroundTint="#AB5A54"
-                    android:text="BACK"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/neuehaasgroteskdsregular"
+                    android:background="@drawable/all_rounded_corner_rectangle"
                     android:layout_margin="15dp">
 
                 </Button>
@@ -126,6 +101,7 @@
 
     <!-- Bottom NavBar -->
     <FrameLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
@@ -135,7 +111,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="75dp"
             android:src="@drawable/rounded_corner_rectangle">
 
         </ImageView>

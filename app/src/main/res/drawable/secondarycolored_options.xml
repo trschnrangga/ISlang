@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Normal state -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/secondary" /> <!-- Green color -->
+            <corners android:radius="12dp" /> <!-- Rounded corners -->
+            <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp" />
+        </shape>
+    </item>
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/secondary" /> <!-- Darker green for pressed state -->
+            <stroke android:color="@color/primary"/>
+            <corners android:radius="12dp" />
+            <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp" />
+        </shape>
+    </item>
+</selector>

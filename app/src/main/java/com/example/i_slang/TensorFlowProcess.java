@@ -9,6 +9,8 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.Log;
 
+import androidx.core.content.ContextCompat;
+
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.support.common.FileUtil;
@@ -178,13 +180,13 @@ public class TensorFlowProcess {
         Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
         Canvas canvas = new Canvas(mutableBitmap);
         Paint paint = new Paint();
-        paint.setColor(Color.RED);
+        paint.setColor(ContextCompat.getColor(context,R.color.primary));
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(8f);
+        paint.setStrokeWidth(20f);
 
         Paint textPaint = new Paint();
         textPaint.setColor(Color.WHITE);
-        textPaint.setTextSize(40f);
+        textPaint.setTextSize(60f);
         textPaint.setTypeface(Typeface.DEFAULT_BOLD);
 
         for (BoundingBox box : boxes) {
