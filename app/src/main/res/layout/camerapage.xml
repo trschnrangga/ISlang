@@ -62,7 +62,7 @@
                     android:id="@+id/predictResults"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:textColor="@color/primary"
                     android:fontFamily="@font/neuehaasgroteskdsregular"
                     android:text="\n\n"/>
@@ -70,14 +70,17 @@
 
             <LinearLayout
                 android:layout_marginTop="12dp"
-                android:layout_width="match_parent"
+                android:layout_width="325dp"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content">
                 <Button
                     android:id="@+id/takePhotobtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Take Photo"
+                    android:textSize="16sp"
                     android:textColor="@color/white"
                     android:textAllCaps="false"
                     android:fontFamily="@font/neuehaasgroteskdsregular"
@@ -88,9 +91,11 @@
 
                 <Button
                     android:id="@+id/deletePhotobtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Delete Photo"
+                    android:textSize="16sp"
                     android:textColor="@color/white"
                     android:textAllCaps="false"
                     android:fontFamily="@font/neuehaasgroteskdsregular"

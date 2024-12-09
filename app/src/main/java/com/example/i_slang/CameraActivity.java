@@ -144,12 +144,11 @@ public class CameraActivity extends AppCompatActivity {
         }
         // Ensure imageCapture use case is not null
         if (imageCapture == null) return;
-
+        long startTime = System.nanoTime();
         // Create output file to hold the image
-        File photoFile = new File(getExternalFilesDir(null), System.currentTimeMillis() + ".jpg");
-
+        long endTime = System.nanoTime();
+        Log.d("Performance", "Time taken: " + (endTime - startTime) + "ns");
         // Set up ImageCapture metadata and output options
-        ImageCapture.OutputFileOptions outputOptions = new ImageCapture.OutputFileOptions.Builder(photoFile).build();
 
         // Take a photo
         imageCapture.takePicture(
@@ -157,7 +156,10 @@ public class CameraActivity extends AppCompatActivity {
                     @OptIn(markerClass = ExperimentalGetImage.class)
                     @Override
                     public void onCaptureSuccess(@NonNull ImageProxy image) {
+                        long startTime = System.nanoTime();
                         currentBitmap = imageProxyToBitmap(image);
+                        long endTime = System.nanoTime();
+                        Log.d("Performance", "Time taken: " + (endTime - startTime) + "ns");
                         if (currentBitmap != null) {
                             Log.d("CameraXApp", "Bitmap created successfully: Width = " + currentBitmap.getWidth() + ", Height = " + currentBitmap.getHeight());
                         } else {
@@ -225,7 +227,7 @@ public class CameraActivity extends AppCompatActivity {
         StringBuilder predictions = new StringBuilder();
         for (BoundingBox box : boundingBoxes) {
             predictions.append("Detected Alphabet: ").append("'" + box.clsName + "'").append("\n");
-            predictions.append("Confidence: ").append(Math.floor(box.cnf*100)+"%").append("\n");
+            predictions.append("Confidence: ").append(Math.floor(box.cnf*100)+"%").append("\n\n");
         }
         predictionTextView.setText(predictions.toString());
     }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background">
+
     <!-- Top NavBar -->
 
     <!-- Card Content View -->
@@ -24,6 +25,8 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/secondary"
             android:clickable="true"
+            android:foreground="@drawable/custom_ripple"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp">
@@ -47,6 +50,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@color/secondary"
+            android:foreground="@drawable/custom_ripple"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp"
@@ -73,6 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@color/secondary"
+            android:foreground="@drawable/custom_ripple"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp"
@@ -99,6 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@color/secondary"
+            android:foreground="@drawable/custom_ripple"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp"
@@ -125,6 +134,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:backgroundTint="@color/secondary"
+            android:foreground="@drawable/custom_ripple"
+            android:focusable="true"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             app:cardMaxElevation="5dp"
