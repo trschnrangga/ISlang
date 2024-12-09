@@ -48,7 +48,7 @@
                 </TextView>
 
                 <FrameLayout
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="300dp"
                     android:layout_gravity="center">
 
@@ -63,7 +63,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Aplikasi ini bertujuan untuk mempermudah orang yang ingin berkomunikasi menggunakan bahasa isyarat Indonesia. \n\n Bahasa isyarat yang digunakan adalah bahasa isyarat BISINDO.\n\nAplikasi dibuat oleh:\nTrischan Mahdy Arangga\nAndhika Widyadhana\nIbnu Anandiartha"
-                        android:textSize="18dp"
+                        android:textSize="14dp"
                         android:fontFamily="@font/neuehaasgroteskdsregular"
                         android:textColor="@color/white"
                         android:padding="15dp">
@@ -83,7 +83,8 @@
                     android:textAllCaps="false"
                     android:fontFamily="@font/neuehaasgroteskdsregular"
                     android:background="@drawable/all_rounded_corner_rectangle"
-                    android:layout_margin="15dp">
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp">
 
                 </Button>
 
