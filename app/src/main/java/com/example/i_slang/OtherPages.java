@@ -8,11 +8,13 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class OtherPages extends AppCompatActivity {
 
 
     private Button backBtn;
-    private FrameLayout cameraBtn;
+    private FloatingActionButton cameraBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class OtherPages extends AppCompatActivity {
         setContentView(layoutId);
 
         backBtn = findViewById(R.id.backButton);
-        cameraBtn = findViewById(R.id.camera_button);
+        cameraBtn = findViewById(R.id.FAB);
 
         // Set the same listener to all views
         backBtn.setOnClickListener(commonClickListener);
@@ -38,7 +40,7 @@ public class OtherPages extends AppCompatActivity {
                 startActivity(intent);
             }
 
-            else if(view.getId() == R.id.camera_button){
+            else if(view.getId() == R.id.FAB){
                 Intent intent = new Intent(OtherPages.this, CameraActivity.class);
                 startActivity(intent);
             }

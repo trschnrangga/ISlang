@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.cardview.widget.CardView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private CardView appInfoPage;
     private CardView profilePage;
     private CardView tutorialPage;
-    private FrameLayout camerabutton;
+    private FloatingActionButton camerabutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         appInfoPage = findViewById(R.id.info_aplikasi);
         profilePage = findViewById(R.id.profile);
         tutorialPage = findViewById(R.id.tutorial);
-        camerabutton = findViewById(R.id.camera_button);
+        camerabutton = findViewById(R.id.FAB);
 
         // Set the same listener to all views
         bahasaIsyaratPage.setOnClickListener(commonClickListener);
@@ -65,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("layout_id", R.layout.tutorial); // Pass the desired layout
                 startActivity(intent);
             }
-            else if(view.getId() == R.id.camera_button){
+            else if(view.getId() == R.id.FAB){
                 Intent intent = new Intent(MainActivity.this, CameraActivity.class);
                 startActivity(intent);
             }
