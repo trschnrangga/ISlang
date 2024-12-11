@@ -50,8 +50,10 @@ public class CameraActivity extends AppCompatActivity {
     private Bitmap currentBitmap;
     private TextView predictionTextView;
     private TensorFlowProcess tensorFlowProcess;
+    private Button flipCam;
     private SurfaceView surfaceView;
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 100;
+    private int cameraFlag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,9 @@ public class CameraActivity extends AppCompatActivity {
         takephoto = findViewById(R.id.takePhotobtn);
         deletephoto = findViewById(R.id.deletePhotobtn);
         predictionTextView = findViewById(R.id.predictResults);
+        flipCam = findViewById(R.id.flipcam);
+
+        cameraFlag = 0;
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -72,9 +77,19 @@ public class CameraActivity extends AppCompatActivity {
                     CAMERA_PERMISSION_REQUEST_CODE);
         } else {
             // Permission already granted, proceed with camera functionality
-            startCamera();
+            startCamera(cameraFlag);
         }
 
+        flipCam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Toggle the cameraFlag
+                cameraFlag = (cameraFlag == 0) ? 1 : 0;
+
+                // Restart the camera with the new flag
+                startCamera(cameraFlag);
+            }
+        });
 
         takephoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,14 +115,14 @@ public class CameraActivity extends AppCompatActivity {
         if (requestCode == CAMERA_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "Camera Permission Granted", Toast.LENGTH_SHORT).show();
-                startCamera();
+                startCamera(cameraFlag);
             } else {
                 Toast.makeText(this, "Camera Permission Denied", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void startCamera(){
+    private void startCamera(int cameraFlag){
         ListenableFuture<ProcessCameraProvider> cameraProviderFuture = ProcessCameraProvider.getInstance(this);
 
         cameraProviderFuture.addListener(() -> {
@@ -127,9 +142,11 @@ public class CameraActivity extends AppCompatActivity {
                         .build();
 
 //                imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(this), this::analyzeImage);
+                CameraSelector cameraSelector = (cameraFlag == 1)
+                        ? CameraSelector.DEFAULT_FRONT_CAMERA
+                        : CameraSelector.DEFAULT_BACK_CAMERA;
 
-                CameraSelector cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA;
-
+                cameraProvider.unbindAll();
                 Camera camera = cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture);
 
             } catch (ExecutionException | InterruptedException e){

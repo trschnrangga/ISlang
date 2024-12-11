@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         bahasaIsyaratPage = findViewById(R.id.bahasa_isyarat);
         galleryPage = findViewById(R.id.gallery);
         appInfoPage = findViewById(R.id.info_aplikasi);
-        profilePage = findViewById(R.id.profile);
+//        profilePage = findViewById(R.id.profile);
         tutorialPage = findViewById(R.id.tutorial);
         camerabutton = findViewById(R.id.FAB);
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         bahasaIsyaratPage.setOnClickListener(commonClickListener);
         galleryPage.setOnClickListener(commonClickListener);
         appInfoPage.setOnClickListener(commonClickListener);
-        profilePage.setOnClickListener(commonClickListener);
+//        profilePage.setOnClickListener(commonClickListener);
         tutorialPage.setOnClickListener(commonClickListener);
         camerabutton.setOnClickListener(commonClickListener);
     }
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("layout_id", R.layout.info_aplikasi); // Pass the desired layout
                 startActivity(intent);
             }
-            else if(view.getId() == R.id.profile){
-
-            }
+//            else if(view.getId() == R.id.profile){
+//
+//            }
             else if(view.getId() == R.id.tutorial){
                 Intent intent = new Intent(MainActivity.this, OtherPages.class);
                 intent.putExtra("layout_id", R.layout.tutorial); // Pass the desired layout

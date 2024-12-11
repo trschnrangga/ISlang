@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/blur">
+    android:background="@drawable/beigelowopacity">
 
     <!-- Card Content View -->
     <LinearLayout
@@ -19,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="470dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="#FFFFFF"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             android:layout_margin="10dp">
@@ -33,21 +33,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bahasa Isyarat"
-                    android:textSize="20dp"
-                    android:textColor="@color/darkerprimary"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/neuehaasgroteskmedium"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/neuehaasgroteskdsregular"
                     android:padding="15dp"
-                    android:layout_gravity="center">
+                    android:text="Bahasa Isyarat"
+                    android:textColor="@color/primary"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
 
                 </TextView>
 
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:src="@drawable/signlang"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:src="@drawable/signlang">
 
                 </ImageView>
 
@@ -56,13 +56,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:backgroundTint="@color/darkerprimary"
-                    android:text="Back"
-                    android:textColor="@color/white"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/neuehaasgroteskdsregular"
+                    android:layout_margin="15dp"
                     android:background="@drawable/all_rounded_corner_rectangle"
-                    android:layout_margin="15dp">
+                    android:fontFamily="@font/neuehaasgroteskdsregular"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkerprimary"
+                    app:backgroundTint="@color/primary">
 
                 </Button>
 

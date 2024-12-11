@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/blur">
+    android:background="@drawable/beigelowopacity">
 
     <!-- Card Content View -->
     <LinearLayout
@@ -19,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="470dp"
-            android:backgroundTint="#FFEBC0"
+            android:backgroundTint="@color/white"
             app:cardCornerRadius="16dp"
             app:cardElevation="5dp"
             android:layout_margin="10dp">
@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tutorial"
                     android:textSize="20dp"
-                    android:textColor="#AB5A54"
+                    android:textColor="@color/primary"
                     android:textStyle="bold"
                     android:padding="15dp"
                     android:layout_gravity="center">
@@ -56,14 +56,14 @@
                         <ImageView
                             android:layout_width="125dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/home">
+                            android:src="@drawable/tutorialpic">
 
                         </ImageView>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="#AB5A54"
+                            android:textColor="@color/primary"
                             android:textSize="14dp"
                             android:textAlignment="center"
                             android:text="Kalian bisa tekan tombol kamera untuk melakukan deteksi huruf bahasa isyarat atau bisa membuka tab Bahasa Isyarat untuk kamus bahasa isyarat.\n\n"
@@ -83,7 +83,7 @@
                     android:layout_gravity="left"
                     android:backgroundTint="#AB5A54"
                     android:text="Back"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkerprimary"
                     android:textAllCaps="false"
                     android:fontFamily="@font/neuehaasgroteskdsregular"
                     android:background="@drawable/all_rounded_corner_rectangle"

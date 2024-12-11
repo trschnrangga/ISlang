@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blur">
+    android:background="@drawable/beigelowopacity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
+
             android:padding="20dp">
 
             <androidx.cardview.widget.CardView
@@ -26,10 +27,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/primary"
                 android:clickable="true"
-                android:foreground="@drawable/custom_ripple"
                 android:focusable="true"
+                android:foreground="@drawable/custom_ripple"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="5dp"
                 app:cardMaxElevation="5dp">
@@ -41,17 +42,17 @@
                     android:fontFamily="@font/neuehaasgroteskregular"
                     android:padding="15dp"
                     android:text="Bahasa Isyarat"
-                    android:textColor="#AB5A54"
+                    android:textColor="@color/darkerprimary"
                     android:textSize="20dp"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textStyle="bold"></TextView>
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/hand"
+                    android:layout_gravity="end"
                     android:padding="15dp"
-                    android:layout_gravity="end">
+                    android:src="@drawable/hand"
+                    app:tint="@color/darkerprimary">
 
                 </ImageView>
 
@@ -61,34 +62,56 @@
                 android:id="@+id/gallery"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:backgroundTint="@color/secondary"
-                android:foreground="@drawable/custom_ripple"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/primary"
+                android:clickable="true"
                 android:focusable="true"
+                android:foreground="@drawable/custom_ripple"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="5dp"
-                app:cardMaxElevation="5dp"
-                android:layout_margin="10dp"
-                android:clickable="true">
+                app:cardMaxElevation="5dp">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gallery"
-                    android:textSize="20dp"
-                    android:textColor="#AB5A54"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/neuehaasgroteskregular"
-                    android:padding="15dp"
-                    android:layout_gravity="center_vertical">
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
 
-                </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gallery"
+                        android:textSize="20dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/darkerprimary"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/neuehaasgroteskregular">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coming soon!"
+                        android:textSize="12dp"
+                        android:textColor="@color/darkerprimary"
+                        android:textStyle="bold"
+                        android:alpha=".5"
+                        android:fontFamily="@font/neuehaasgroteskregular"
+                        android:layout_gravity="center">
+
+                    </TextView>
+
+                </LinearLayout>
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/img"
+                    android:layout_gravity="end"
                     android:padding="15dp"
-                    android:layout_gravity="end">
+                    android:src="@drawable/img"
+                    app:tint="@color/darkerprimary">
 
                 </ImageView>
 
@@ -98,7 +121,7 @@
                 android:id="@+id/info_aplikasi"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/primary"
                 android:foreground="@drawable/custom_ripple"
                 android:focusable="true"
                 app:cardCornerRadius="16dp"
@@ -112,7 +135,7 @@
                     android:layout_height="wrap_content"
                     android:text="Info Aplikasi"
                     android:textSize="20dp"
-                    android:textColor="#AB5A54"
+                    android:textColor="@color/darkerprimary"
                     android:textStyle="bold"
                     android:padding="15dp"
                     android:fontFamily="@font/neuehaasgroteskregular"
@@ -123,9 +146,10 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/info"
+                    android:layout_gravity="end"
                     android:padding="15dp"
-                    android:layout_gravity="end">
+                    app:tint="@color/darkerprimary"
+                    android:src="@drawable/info">
 
                 </ImageView>
 
@@ -135,7 +159,7 @@
                 android:id="@+id/profile"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/primary"
                 android:foreground="@drawable/custom_ripple"
                 android:focusable="true"
                 app:cardCornerRadius="16dp"
@@ -144,24 +168,47 @@
                 android:layout_margin="10dp"
                 android:clickable="true">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Profile"
-                    android:textSize="20dp"
-                    android:textColor="#AB5A54"
-                    android:textStyle="bold"
-                    android:padding="15dp"
-                    android:fontFamily="@font/neuehaasgroteskregular"
-                    android:layout_gravity="center_vertical">
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
 
-                </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textSize="20dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/darkerprimary"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/neuehaasgroteskregular">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coming soon!"
+                        android:textSize="12dp"
+                        android:textColor="@color/darkerprimary"
+                        android:textStyle="bold"
+                        android:alpha=".5"
+                        android:fontFamily="@font/neuehaasgroteskregular"
+                        android:layout_gravity="center">
+
+                    </TextView>
+
+                </LinearLayout>
+
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/user"
                     android:padding="15dp"
+                    app:tint="@color/darkerprimary"
                     android:layout_gravity="end">
 
                 </ImageView>
@@ -172,7 +219,7 @@
                 android:id="@+id/tutorial"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:backgroundTint="@color/secondary"
+                android:backgroundTint="@color/primary"
                 android:foreground="@drawable/custom_ripple"
                 android:focusable="true"
                 app:cardCornerRadius="16dp"
@@ -186,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tutorial"
                     android:textSize="20dp"
-                    android:textColor="#AB5A54"
+                    android:textColor="@color/darkerprimary"
                     android:textStyle="bold"
                     android:padding="15dp"
                     android:fontFamily="@font/neuehaasgroteskregular"
@@ -197,9 +244,10 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/keys"
+                    android:layout_gravity="end"
                     android:padding="15dp"
-                    android:layout_gravity="end">
+                    app:tint="@color/darkerprimary"
+                    android:src="@drawable/keys">
 
                 </ImageView>
 
@@ -231,7 +279,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_camera_alt_24"
                 app:layout_anchor="@id/bottomAppBar"
-                app:tint="@color/white"
+                app:tint="@color/primary"
                 app:backgroundTint="@color/darkerprimary">
 
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
