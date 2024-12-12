@@ -30,7 +30,7 @@ import java.util.List;
 
 public class TensorFlowProcess {
 
-    private static final String MODEL_PATH = "best_float32.tflite";
+    private static final String MODEL_PATH = "366dataset32.tflite";
     private static final String LABEL_PATH = "labels.txt";
     public Interpreter interpreter;
     private int tensorWidth = 0;
