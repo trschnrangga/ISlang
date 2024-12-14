@@ -132,8 +132,8 @@ public class CameraActivity extends AppCompatActivity {
                 Preview preview = new Preview.Builder().build();
                 preview.setSurfaceProvider(previewView.getSurfaceProvider());
                 imageCapture = new ImageCapture.Builder()
-                        .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY) // Fast capture mode// Set rotation to match display
-                        .setTargetAspectRatio(AspectRatio.RATIO_4_3)                 // Optional: Choose 4:3 aspect ratio for standard captures
+                        .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY)
+                        .setTargetAspectRatio(AspectRatio.RATIO_4_3)
                         .build();
 
 
@@ -141,7 +141,6 @@ public class CameraActivity extends AppCompatActivity {
                         .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
                         .build();
 
-//                imageAnalysis.setAnalyzer(ContextCompat.getMainExecutor(this), this::analyzeImage);
                 CameraSelector cameraSelector = (cameraFlag == 1)
                         ? CameraSelector.DEFAULT_FRONT_CAMERA
                         : CameraSelector.DEFAULT_BACK_CAMERA;

@@ -53,12 +53,19 @@
                         android:orientation="horizontal"
                         android:padding="15dp">
 
-                        <ImageView
-                            android:layout_width="125dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/tutorialpic">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            app:cardCornerRadius="12dp"
+                            android:elevation="5dp"
+                            android:layout_height="wrap_content">
 
-                        </ImageView>
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="240dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tutorialpic"/>
+
+                        </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="wrap_content"
